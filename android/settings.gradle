@@ -1,0 +1,5 @@
+rootProject.name = 'PlotReactNativeExample'
+include ':plotprojects-react-native-module'
+project(':plotprojects-react-native-module').projectDir = new File(rootProject.projectDir, '../../plotprojects-react-native-module/android')
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'

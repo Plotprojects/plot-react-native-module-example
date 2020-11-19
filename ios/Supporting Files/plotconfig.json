@@ -1,0 +1,7 @@
+{
+  "publicToken": "REPLACE_ME",
+  "enableOnFirstRun": true,
+  "maxRegionsMonitored": 20,
+  "automaticallyAskLocationPermission": true,
+  "automaticallyAskNotificationPermission": true
+}
