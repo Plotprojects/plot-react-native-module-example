@@ -11,7 +11,7 @@ After creating an account in PlotProjects [dashboard](https://admin.plotprojects
 
 Once tokens are updated, you can run using the following commands:
 
-* `react-native run-android` for running on Android device.
-* `react-native run-ios` for running on iOS device.
+* `npx react-native run-android` for running on Android device.
+* `npx react-native run-ios` for running on iOS device.
 
 For more details, please refer to [PlotProjects official documentation](http://files.plotprojects.com/documentation/android/3.13.0/how-to-guides/React-Native-integration-guide/).
