@@ -9,9 +9,12 @@ After creating an account in PlotProjects [dashboard](https://admin.plotprojects
 * `ios/Supporting Files/plotconfig.json`
 * `android/app/src/main/assets/plotconfig.json`
 
-Once tokens are updated, you can run using the following commands:
+Once tokens are updated, you need to install the required dependencies by running the following command in the root directory:
 
-* `npx react-native run-android` for running on Android device.
-* `npx react-native run-ios` for running on iOS device.
+```
+npm install
+```
+
+You can now run by opening either xCode for iOS project or Android studio for Android project.
 
 For more details, please refer to [PlotProjects official documentation](http://files.plotprojects.com/documentation/android/3.13.0/how-to-guides/React-Native-integration-guide/).
