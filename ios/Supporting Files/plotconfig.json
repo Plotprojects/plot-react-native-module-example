@@ -3,5 +3,5 @@
   "enableOnFirstRun": true,
   "maxRegionsMonitored": 20,
   "automaticallyAskLocationPermission": true,
-  "automaticallyAskNotificationPermission": true
+  "provisionalNotificationPermission": true
 }

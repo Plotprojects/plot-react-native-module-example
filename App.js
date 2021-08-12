@@ -46,8 +46,7 @@ const initializePlot = async () => {
         notifications.forEach((n) => {
           n['message'] = n['message'] + ' after filtering';
         });
-        // notifications[0]['message'] = 'NLD after filtering';
-		console.log(JSON.stringify(notifications));
+		    console.log(JSON.stringify(notifications));
         Plot.filterNotifications(batchId, JSON.stringify(notifications));
     });
 	
