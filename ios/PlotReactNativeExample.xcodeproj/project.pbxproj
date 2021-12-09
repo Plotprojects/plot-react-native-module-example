@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PlotReactNativeExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PlotReactNativeExampleTests.m */; };
+		08203894275E73E000106E44 /* EmptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203893275E73E000106E44 /* EmptyFile.swift */; };
+		08203895275E73E000106E44 /* EmptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08203893275E73E000106E44 /* EmptyFile.swift */; };
 		083F85A826C3F36400EADB7B /* libPods-PlotReactNativeExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8EE8651E5617478EECFF8A /* libPods-PlotReactNativeExample.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
@@ -43,6 +45,9 @@
 		00E356EE1AD99517003FC87E /* PlotReactNativeExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlotReactNativeExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PlotReactNativeExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlotReactNativeExampleTests.m; sourceTree = "<group>"; };
+		08203891275E73E000106E44 /* PlotReactNativeExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlotReactNativeExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		08203892275E73E000106E44 /* PlotReactNativeExample-tvOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PlotReactNativeExample-tvOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		08203893275E73E000106E44 /* EmptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmptyFile.swift; path = PlotReactNativeExample/EmptyFile.swift; sourceTree = "<group>"; };
 		0A8EE8651E5617478EECFF8A /* libPods-PlotReactNativeExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlotReactNativeExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* PlotReactNativeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlotReactNativeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PlotReactNativeExample/AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +130,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				08203893275E73E000106E44 /* EmptyFile.swift */,
+				08203891275E73E000106E44 /* PlotReactNativeExample-Bridging-Header.h */,
+				08203892275E73E000106E44 /* PlotReactNativeExample-tvOS-Bridging-Header.h */,
 			);
 			name = PlotReactNativeExample;
 			sourceTree = "<group>";
@@ -291,10 +299,11 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 7CC5LNPAQ6;
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1310;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 1310;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
@@ -419,11 +428,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PlotReactNativeExample-PlotReactNativeExampleTests/Pods-PlotReactNativeExample-PlotReactNativeExampleTests-frameworks.sh",
 				"${PODS_ROOT}/PlotPlugin/PlotProjects-v3_4_6/PlotProjects.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-DoubleConversion/double-conversion.framework/double-conversion",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlotProjects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/double-conversion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,11 +486,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PlotReactNativeExample/Pods-PlotReactNativeExample-frameworks.sh",
 				"${PODS_ROOT}/PlotPlugin/PlotProjects-v3_4_6/PlotProjects.framework",
-				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/Flipper-DoubleConversion/double-conversion.framework/double-conversion",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL-Universal/OpenSSL.framework/OpenSSL",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlotProjects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/double-conversion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08203894275E73E000106E44 /* EmptyFile.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -571,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08203895275E73E000106E44 /* EmptyFile.swift in Sources */,
 				2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */,
 				2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */,
 			);
@@ -616,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 881AB7E63C654D228303D0BD /* Pods-PlotReactNativeExample-PlotReactNativeExampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -639,6 +655,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CECA8AD241F7E7283BD5276 /* Pods-PlotReactNativeExample-PlotReactNativeExampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = PlotReactNativeExampleTests/Info.plist;
@@ -659,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7CB53A81611A9F196235567 /* Pods-PlotReactNativeExample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
 					"$(inherited)",
@@ -682,6 +700,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plotprojects.PlotReactNativeExample;
 				PRODUCT_NAME = PlotReactNativeExample;
+				SWIFT_OBJC_BRIDGING_HEADER = "PlotReactNativeExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -692,6 +711,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3907121CB01CEDABF5474C2 /* Pods-PlotReactNativeExample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ARCHS = (
 					"$(ARCHS_STANDARD)",
 					"$(inherited)",
@@ -710,6 +730,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.plotprojects.PlotReactNativeExample;
 				PRODUCT_NAME = PlotReactNativeExample;
+				SWIFT_OBJC_BRIDGING_HEADER = "PlotReactNativeExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -721,6 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -737,8 +759,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.plotprojects.PlotReactNativeExample-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "PlotReactNativeExample-tvOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 14.5;
 			};
 			name = Debug;
 		};
@@ -748,6 +773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -764,14 +790,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.plotprojects.PlotReactNativeExample-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "PlotReactNativeExample-tvOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
+				TVOS_DEPLOYMENT_TARGET = 14.5;
 			};
 			name = Release;
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -798,6 +827,7 @@
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -853,7 +883,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -914,7 +944,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

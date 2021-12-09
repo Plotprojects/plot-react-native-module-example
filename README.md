@@ -12,7 +12,7 @@ After creating an account in PlotProjects [dashboard](https://admin.plotprojects
 Once tokens are updated, you need to install the required dependencies by running the following command in the root directory:
 
 ```
-npm install
+yarn install
 ```
 
 You can now run by opening either xCode for iOS project or Android studio for Android project.

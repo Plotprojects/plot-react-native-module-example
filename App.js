@@ -46,42 +46,41 @@ const initializePlot = async () => {
         notifications.forEach((n) => {
           n['message'] = n['message'] + ' after filtering';
         });
-		    console.log(JSON.stringify(notifications));
+		    console.debug(JSON.stringify(notifications));
         Plot.filterNotifications(batchId, JSON.stringify(notifications));
     });
 	
 	Plot.registerGeotriggerHandler((batchId, geotriggers) => {
 		console.debug('received geotriggers in the handler with batchId: ' + batchId);
-		console.log(JSON.stringify(geotriggers));
+		console.debug(JSON.stringify(geotriggers));
 		Plot.handleGeotriggers(batchId, JSON.stringify(geotriggers));
 	});
 	
 	Plot.registerNotificationOpenHandler((openedNotification) => {
 		console.debug('received opened notifications in the handler');
-		console.log(JSON.stringify(openedNotification));
+		console.debug(JSON.stringify(openedNotification));
 	});
 }
 
 const requestLocationPermission = async () => {
     try {
-		if(Platform.OS === "ios") {
-			initializePlot();
-		} else {
-	        const granted = await PermissionsAndroid.requestMultiple(
-	          [PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, 
-	              PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
-	              PermissionsAndroid.PERMISSIONS.ACCESS_BACKGROUND_LOCATION]);
-	        if (granted['android.permission.ACCESS_BACKGROUND_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
-	              || granted['android.permission.ACCESS_COARSE_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
-	              || granted['android.permission.ACCESS_BACKGROUND_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
-	        ) {
-	          console.log("Location permission granted!");
-	          initializePlot();
-	        } else {
-	          console.log("Location permission denied");
-	        }
-		}
-      
+      if(Platform.OS === "ios") {
+        initializePlot();
+      } else {
+            const granted = await PermissionsAndroid.requestMultiple(
+              [PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, 
+                  PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
+                  PermissionsAndroid.PERMISSIONS.ACCESS_BACKGROUND_LOCATION]);
+            if (granted['android.permission.ACCESS_BACKGROUND_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
+                  || granted['android.permission.ACCESS_COARSE_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
+                  || granted['android.permission.ACCESS_BACKGROUND_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
+            ) {
+              console.debug("Location permission granted!");
+              initializePlot();
+            } else {
+              console.debug("Location permission denied");
+            }
+      }
     } catch (err) {
       console.warn(err);
     }
