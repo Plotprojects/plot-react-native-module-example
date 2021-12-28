@@ -28,7 +28,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Plot = NativeModules.PlotProjectsReactModule;
+import Plot from 'plotprojects-react-native-module';
 
 const initializePlot = async () => {
 

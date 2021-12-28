@@ -17,4 +17,4 @@ yarn install
 
 You can now run by opening either xCode for iOS project or Android studio for Android project.
 
-For more details, please refer to [PlotProjects official documentation](http://files.plotprojects.com/documentation/android/3.13.0/how-to-guides/React-Native-integration-guide/).
+For more details, please refer to [PlotProjects official documentation](http://files.plotprojects.com/documentation/android/3.15.0/how-to-guides/React-Native-integration-guide/).
