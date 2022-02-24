@@ -2,7 +2,6 @@
   "publicToken": "REPLACE_ME",
   "enableOnFirstRun": true,
   "debug": true,
-  "showOnGoingNotification": "during_network_request",
   "enableCombinedMonitoring": "false",
   "automaticallyAskLocationPermission": true
 }

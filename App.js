@@ -50,11 +50,15 @@ const initializePlot = async () => {
         Plot.filterNotifications(batchId, JSON.stringify(notifications));
     });
 	
+	console.debug('registering geotrigger handler');
+	
 	Plot.registerGeotriggerHandler((batchId, geotriggers) => {
 		console.debug('received geotriggers in the handler with batchId: ' + batchId);
 		console.debug(JSON.stringify(geotriggers));
 		Plot.handleGeotriggers(batchId, JSON.stringify(geotriggers));
 	});
+	
+	console.debug('registering notificaiton open handler');
 	
 	Plot.registerNotificationOpenHandler((openedNotification) => {
 		console.debug('received opened notifications in the handler');
