@@ -73,16 +73,20 @@ const requestLocationPermission = async () => {
       } else {
         const granted = await PermissionsAndroid.requestMultiple(
           [PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, 
-              PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
-              PermissionsAndroid.PERMISSIONS.ACCESS_BACKGROUND_LOCATION]);
-        if (granted['android.permission.ACCESS_BACKGROUND_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
-              || granted['android.permission.ACCESS_COARSE_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
-              || granted['android.permission.ACCESS_BACKGROUND_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
+              PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION]);
+        if (granted['android.permission.ACCESS_COARSE_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
+              || granted['android.permission.ACCESS_FINE_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
         ) {
-          console.debug("Location permission granted!");
+			console.debug("Foreground location permission granted!");
+			const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.ACCESS_BACKGROUND_LOCATION);
+			if (granted['android.permission.ACCESS_BACKGROUND_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED) {
+				console.debug("Background location permission granted!");
+			} else {
+				console.debug("Background location permission denied!");
+			}
           initializePlot();
         } else {
-          console.debug("Location permission denied");
+          console.debug("Location permission denied!. Not initializing PlotProjects SDK.");
         }
       }
     } catch (err) {
