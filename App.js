@@ -72,8 +72,12 @@ const requestLocationPermission = async () => {
         initializePlot();
       } else {
         const granted = await PermissionsAndroid.requestMultiple(
-          [PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, 
-              PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION]);
+          [
+			  'android.permission.POST_NOTIFICATIONS',
+			  PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
+			  PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+  			  PermissionsAndroid.PERMISSIONS.BLUETOOTH_SCAN,
+			  PermissionsAndroid.PERMISSIONS.ACTIVITY_RECOGNITION]);
         if (granted['android.permission.ACCESS_COARSE_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
               || granted['android.permission.ACCESS_FINE_LOCATION'] === PermissionsAndroid.RESULTS.GRANTED
         ) {

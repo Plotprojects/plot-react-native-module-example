@@ -12,7 +12,7 @@ After creating an account in PlotProjects [dashboard](https://admin.plotprojects
 Once tokens are updated, you need to install the required dependencies by running the following command in the root directory:
 
 ```
-npm install
+yarn install
 ```
 
 You can run the Android app using the following command:
@@ -21,10 +21,21 @@ You can run the Android app using the following command:
 npx react-native run-android
 ```
 
+If you wnt to test without having your phone connected to your computer all the time, you can run a release build using:
+
+```
+npx react-native run-android --variant release
+```
 The same way you can run iOS app using the following command:
 
 ```
 npx react-native run-ios
+```
+
+Or run a release build on iOS using the command:
+
+```
+npx react-native run-ios --configuration Release
 ```
 
 

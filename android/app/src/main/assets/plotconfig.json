@@ -2,6 +2,9 @@
   "publicToken": "REPLACE_ME",
   "enableOnFirstRun": true,
   "debug": true,
-  "enableCombinedMonitoring": "false",
-  "automaticallyAskLocationPermission": true
+  "enableCombinedMonitoring": false,
+  "automaticallyAskLocationPermission": false,
+  "enableTransitionRecognition": true,
+  "enableAltBeaconMonitoring": false,
+  "enableAltBeaconForegroundService": false
 }

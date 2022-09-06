@@ -10,9 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "plotprojects-react-native-module": "^1.0.12",
     "react": "18.0.0",
-    "react-native": "0.69.4",
-    "plotprojects-react-native-module": "^1.0.11"
+    "react-native": "0.69.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
