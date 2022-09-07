@@ -284,16 +284,17 @@ dependencies {
     } else {
         implementation jscFlavor
     }
-    implementation 'androidx.core:core:1.1.0'
-    implementation 'androidx.fragment:fragment:1.1.0'
-    implementation 'androidx.work:work-runtime:2.2.0'
-    implementation 'androidx.work:work-gcm:2.2.0'
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
-    implementation 'com.google.android.gms:play-services-nearby:17.0.0'
-    implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-messaging:20.0.1'
-    implementation 'com.google.android.gms:play-services-awareness:17.1.0'
-    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    implementation 'androidx.core:core:1.8.0'
+    implementation 'androidx.fragment:fragment:1.5.2'
+    implementation 'androidx.work:work-runtime:2.7.1'
+    implementation 'androidx.work:work-gcm:2.7.1'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'com.google.android.gms:play-services-nearby:18.3.0'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.0.8'
+    implementation 'com.google.android.gms:play-services-awareness:19.0.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'org.altbeacon:android-beacon-library:2.19.2'
 }
 
 if (isNewArchitectureEnabled()) {

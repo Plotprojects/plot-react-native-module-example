@@ -5,6 +5,6 @@
   "enableCombinedMonitoring": false,
   "automaticallyAskLocationPermission": false,
   "enableTransitionRecognition": true,
-  "enableAltBeaconMonitoring": false,
+  "enableAltBeaconMonitoring": true,
   "enableAltBeaconForegroundService": false
 }
