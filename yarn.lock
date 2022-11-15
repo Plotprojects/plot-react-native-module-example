@@ -5440,10 +5440,10 @@ plist@^3.0.2:
     base64-js "^1.5.1"
     xmlbuilder "^9.0.7"
 
-plotprojects-react-native-module@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/plotprojects-react-native-module/-/plotprojects-react-native-module-1.0.11.tgz#e1263f38cf8bd863999527c165606f75b8c3e0e9"
-  integrity sha512-zuh5xvqomzr4kogCsrZtHeO+tHe6PbPDFey7RlL8mzs6T95JG8j1zzOWSnfYGyKYgeahCWyRIqfJpiC8VBlTOw==
+plotprojects-react-native-module@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/plotprojects-react-native-module/-/plotprojects-react-native-module-1.0.14.tgz#9279c648678ef12a488705bad2e99862baabb90d"
+  integrity sha512-Duj3dQQx0w2kyJYEtn93xaWRrqCuUg+fZrACC7v9MEVS4hR6lbgW6bq2L/JO+h+corfHosnouqAiQcsH91JTNQ==
 
 posix-character-classes@^0.1.0:
   version "0.1.1"
