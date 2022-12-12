@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "plotprojects-react-native-module": "^1.0.15",
+    "plotprojects-react-native-module": "^1.0.16",
     "react": "18.0.0",
     "react-native": "0.69.5"
   },

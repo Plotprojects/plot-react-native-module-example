@@ -36,7 +36,7 @@ const initializePlot = async () => {
   Plot.setAdvertisingId("jdlsfksdkjf", true);
 
   Plot.sendAttributionEvent("read_flyer", "discounts_week_12");
-  Plot.setStringSegmentationProperty("gender", "man");
+  Plot.setStringSegmentationProperty("customer_id", "123");
 
   console.debug("Registering notificaiton filter");
 
@@ -67,7 +67,12 @@ const initializePlot = async () => {
     console.debug("Received opened notifications in the handler");
     console.debug(JSON.stringify(openedNotification));
   });
+  
+  Plot.deviceId(deviceId => {
+  	console.debug("Device ID is: " + deviceId);
+  });
 };
+
 
 const requestLocationPermission = async () => {
   try {
